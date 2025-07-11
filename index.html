@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira Animação Canvas</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        canvas{
+            display: block;
+            background-color: black;
+        }
+
+        #menu {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgb(25, 29, 31);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #ranking {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgb(25, 29, 31);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 200px;
+            display: none;
+        }
+
+        .hidden {
+            display: none !important;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="menu"> 
+        <h2>Digite seu nome para jogar</h2>
+        <input type="text" id="nomeJogador" placeholder="Seu nome aqui !"/>
+        <br> <br>
+        <label for="corPersonagem"> Escolha a cor: </label>
+        <select id="corPersonagem">
+            <option value="white">Branco</option>
+            <option value="blue">Azul</option>
+            <option value="pink">Rosa</option>
+            <option value="orange">Laranja</option>
+            <option value="brown">Marrom</option>
+            <option value="purple">Roxo</option>
+        </select>
+        <button id="btnJogar">Jogar</button>
+        <div id="rankingMenu"></div>
+    </div>
+
+    <div id="ranking">
+        <h3>Ranking</h3>
+        <div id="rankingLista"></div>
+    </div>
+        <canvas id="meuCanvas">
+
+        </canvas>
+        <audio id="End" src="End.wav"></audio>
+        <audio id="Lose" src="Lose.wav"></audio>
+        <audio id="Win" src="Win.wav"></audio>
+
+        <script src="animacao.js"></script>
+</body>
+</html>
