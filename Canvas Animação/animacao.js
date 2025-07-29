@@ -72,11 +72,11 @@ const lado2 = 30
 const raio = 30
 
 let velocidadeY = 3
-let velocidadeX = 3
-let speedy = 8
-let speedx = 8
-let veloy= 10
-let velox= 10
+let velocidadeX = 10
+let speedy = 15
+let speedx = 15
+let veloy= 20
+let velox= 20
 let velX,velY 
 
 let jogoIniciado = false
