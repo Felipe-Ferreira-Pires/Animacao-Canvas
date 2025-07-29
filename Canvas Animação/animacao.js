@@ -246,7 +246,7 @@ function animar() {
         somPonto.currentTime=0
         somPonto.play()
         criarExplosao(x,y,'0,255,0')
-        pontuacao++;
+        pontuacao+++++;
         quadradox = Math.random() * (canvas.width - lado);
         quadradoy = Math.random() * (canvas.height - lado);
         SalvarPontuacaoNoFireBase()
