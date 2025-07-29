@@ -63,8 +63,8 @@ window.addEventListener('resize',resizeCanvas)
 
 let x = 100
 let y = 100
-let quadradox = 2
-let quadradoy = 2
+let quadradox = 10
+let quadradoy = 10
 let perdery = 500
 let perderx = 500
 let pontuacao = 0
@@ -73,12 +73,12 @@ const lado = 30
 const lado2 = 30
 const raio = 30
 
-let velocidadeY = 3
-let velocidadeX = 3
-let speedy = 8
-let speedx = 8
-let veloy= 10
-let velox= 10
+let velocidadeY = 6
+let velocidadeX = 6
+let speedy = 10
+let speedx = 10
+let veloy= 12
+let velox= 12
 let velX,velY 
 
 let jogoIniciado = false
