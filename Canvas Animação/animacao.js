@@ -90,6 +90,13 @@ const somInimigo = document.getElementById('Lose')
 const particulas = []
 
 
+let setas = {
+  ArrowUp: false,
+  ArrowDown: false,
+  ArrowLeft: false,
+  ArrowRight: false
+};
+
 for (let i = 0 ; i<5; i++) {
     perigosos.push({
         x: Math.random()*(canvas.width-50),
@@ -403,5 +410,22 @@ function reiniciarJogo (){
         inimigos.x=Math.random()*(canvas.width-inimigos.lado)
         inimigos.y=Math.random()*(canvas.height-inimigos.lado)
     }
+
+  
+
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === "w") setas.ArrowUp = true;
+  if (e.key.toLowerCase() === "s") setas.ArrowDown = true;
+  if (e.key.toLowerCase() === "a") setas.ArrowLeft = true;
+  if (e.key.toLowerCase() === "d") setas.ArrowRight = true;
+});
+
+document.addEventListener('keyup', function (e) {
+  if (e.key.toLowerCase() === "w") setas.ArrowUp = false;
+  if (e.key.toLowerCase() === "s") setas.ArrowDown = false;
+  if (e.key.toLowerCase() === "a") setas.ArrowLeft = false;
+  if (e.key.toLowerCase() === "d") setas.ArrowRight = false;
+});
     desenharTelaInicial()
+
 }
